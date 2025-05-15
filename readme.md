@@ -6,6 +6,39 @@ A FastAPI-powered web application that allows users to view, filter, and compare
 
 ---
 
+
+# 🌍 ETL Process: World Bank Data
+
+This script extracts, transforms, and loads GDP and population data from the [World Bank API](https://data.worldbank.org/).
+
+## 📦 Files Created
+
+- `raw_countries.csv`: List of all countries (excluding aggregates)
+- `raw_indicators.csv`: GDP & population data for 2020–2024
+- `indicator_metadata.csv`: Metadata about selected indicators
+
+## 🔁 How It Works
+
+1. **Extract**:
+   - Fetch all country details
+   - Fetch metadata for GDP (`NY.GDP.MKTP.CD`) and population (`SP.POP.TOTL`)
+   - Download indicator data for each country from 2020 to 2024
+
+2. **Transform**:
+   - Filter out aggregate entries (e.g., "World", "Europe & Central Asia")
+   - Structure indicator data by country-year
+
+3. **Load**:
+   - Save all data to CSV files for use in your FastAPI app or data analysis
+
+## ▶️ Run the Script
+
+```bash
+python etl_script.py
+
+
+
+----
 ## 🚀 Features
 
 - Interactive dropdowns for countries (name, ISO code, capital city)
@@ -52,8 +85,12 @@ worldbank-data-viewer/
 └── .dockerignore
 
 ---
+```bash
+pip install -r requirements.txt
+```bash
+unicorn fast:app --reload
 
-## 📘 BONUS: User-Friendly API Guide (Non-developer users)
+##  User-Friendly API Guide (Non-developer users)
 
 You can also include this in your `docs/usage_guide.md` or embed it on the homepage:
 
