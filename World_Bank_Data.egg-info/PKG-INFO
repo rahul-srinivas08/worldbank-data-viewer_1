@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: World-Bank-Data
+Version: 0.1
+Author: Rahul Srinivas
+Requires-Dist: python-multipart
+Requires-Dist: fastapi
+Requires-Dist: pandas
+Requires-Dist: jinja2
+Requires-Dist: uvicorn[standard]
+Dynamic: author
+Dynamic: requires-dist

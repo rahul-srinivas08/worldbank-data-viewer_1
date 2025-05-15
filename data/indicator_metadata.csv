@@ -1,0 +1,3 @@
+id,name,source,unit,topics
+NY.GDP.MKTP.CD,GDP (current US$),World Development Indicators,,['Economy & Growth']
+SP.POP.TOTL,"Population, total",World Development Indicators,,"['Climate Change', 'Health ']"
